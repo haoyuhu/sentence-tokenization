@@ -1,0 +1,34 @@
+{
+  "name": "sentence-tokenization",
+  "version": "1.0.0",
+  "description": "Tokenizer for tokenizing sentences, for BERT or other NLP preprocessing.",
+  "main": "tokenizers.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaoyuHu/sentence-tokenization.git"
+  },
+  "keywords": [
+    "tokenize",
+    "BERT",
+    "NLP",
+    "preprocessing"
+  ],
+  "author": "hahahu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HaoyuHu/sentence-tokenization/issues"
+  },
+  "homepage": "https://github.com/HaoyuHu/sentence-tokenization#readme"
+}
