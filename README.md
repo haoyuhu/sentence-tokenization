@@ -1,12 +1,12 @@
 # sentence-tokenization
 
-Simple tool for tokenizing sentences, for **BERT** or other **NLP preprocessing**. You can divide the content of sentences and paragraphs into word-level content.
+Simple tool for tokenizing sentences, for **BERT** or other **NLP preprocessing**. You can split the content of sentences and paragraphs into word-level content.
 
 ## Usage
 
 ### BasicTokenizer
 
-Simply divide sentence to words and punctuation based on **whitespace**.
+Simply split sentence to words and punctuation based on **whitespace**.
 
 ```javascript
 const tokenizers = require('./tokenizers');
@@ -28,7 +28,7 @@ tokens: [ 'how', 'do', 'i', 'control', 'my', 'horny', 'emotions', '?' ]
 
 ### WordpieceTokenizer
 
-This uses a greedy **longest-match-first algorithm** to perform tokenization, simply divide word to sub-tokens based on the given vocabulary.
+This uses a greedy **longest-match-first algorithm** to perform tokenization, simply split word to sub-tokens based on the given vocabulary.
 
 ```javascript
 const tokenizers = require('./tokenizers');
@@ -51,7 +51,7 @@ sub_tokens: [ 'una', '##ffa', '##ble' ]
 
 ### FullTokenizer
 
-Divide sentence to word-pieces and punctuation by both **BasicTokenizer** and **WordpieceTokenizer**. What's more, you can encode tokens to ids and decode tokens from ids.
+Split sentence to word-pieces and punctuation by both **BasicTokenizer** and **WordpieceTokenizer**. What's more, you can encode tokens to ids and decode tokens from ids.
 
 ```javascript
 const tokenizers = require('./tokenizers');
@@ -80,7 +80,7 @@ decoded: [ 'how', 'do', 'i', 'control', 'my', 'horn', '##y', 'emotions', '?' ]
 
 ### FullPairTokenizer
 
-Divide sentence pair to word-pieces and punctuation by **FullTokenizer**. What's more, you can encode tokens to ids, decode tokens from ids, and adjust length of all results.
+Split sentence pair to word-pieces and punctuation by **FullTokenizer**. What's more, you can encode tokens to ids, decode tokens from ids, and adjust length of all results.
 
 ```javascript
 const tokenizers = require('./tokenizers');
