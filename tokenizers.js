@@ -199,11 +199,11 @@ class WordpieceTokenizer {
       let isBad = false;
       let start = 0;
       const subTokens = [];
-      while (start < text.length) {
-        let end = text.length;
+      while (start < token.length) {
+        let end = token.length;
         let currSubStr = null;
         while (start < end) {
-          let subStr = text.slice(start, end);
+          let subStr = token.slice(start, end);
           if (start > 0) {
             subStr = '##' + subStr;
           }
@@ -338,4 +338,4 @@ class FullPairTokenizer {
   }
 }
 
-module.exports = { BasicTokenizer, WordpieceTokenizer, FullTokenizer, FullPairTokenizer };
+module.exports = { BasicTokenizer, WordpieceTokenizer, FullTokenizer, FullPairTokenizer, loadVocab };
