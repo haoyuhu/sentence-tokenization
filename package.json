@@ -1,6 +1,6 @@
 {
   "name": "sentence-tokenization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tokenizer for tokenizing sentences, for BERT or other NLP preprocessing.",
   "main": "tokenizers.js",
   "dependencies": {},
