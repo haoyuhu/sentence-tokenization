@@ -28,7 +28,7 @@ tokens: [ 'how', 'do', 'i', 'control', 'my', 'horny', 'emotions', '?' ]
 
 ### WordpieceTokenizer
 
-This uses a greedy **longest-match-first algorithm** to perform tokenization, simply split word to sub-tokens based on the given vocabulary.
+This uses a **greedy longest-match-first algorithm** to perform tokenization, simply split word to sub-tokens based on the given vocabulary.
 
 ```javascript
 const tokenizers = require('./tokenizers');
@@ -118,25 +118,23 @@ input_mask: [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 
 ```shell
 node ./test.js
 
-/*
-Output:
-tokens: how do i control my horny emotions ?
-testBasicTokenizer() testing is passed.
+# Output:
+# tokens: how do i control my horny emotions ?
+# testBasicTokenizer() testing is passed.
 
-sub_tokens: una ##ffa ##ble
-testWordpieceTokenizer() testing is passed.
+# sub_tokens: una ##ffa ##ble
+# testWordpieceTokenizer() testing is passed.
 
-tokens: how do i control my horn ##y emotions ?
-encoded: 2129 2079 1045 2491 2026 7109 2100 6699 1029
-decoded: how do i control my horn ##y emotions ?
-testFullTokenizer() testing is passed.
+# tokens: how do i control my horn ##y emotions ?
+# encoded: 2129 2079 1045 2491 2026 7109 2100 6699 1029
+# decoded: how do i control my horn ##y emotions ?
+# testFullTokenizer() testing is passed.
 
-tokens: [CLS] how do i control my horn ##y emotions ? [SEP] how do you control your horn ##iness ? [SEP]
-input_ids: 101 2129 2079 1045 2491 2026 7109 2100 6699 1029 102 2129 2079 2017 2491 2115 7109 9961 1029 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-segment_ids: 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-input_mask 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-testFullPairTokenizer() testing is passed.
-*/
+# tokens: [CLS] how do i control my horn ##y emotions ? [SEP] how do you control your horn ##iness ? [SEP]
+# input_ids: 101 2129 2079 1045 2491 2026 7109 2100 6699 1029 102 2129 2079 2017 2491 2115 7109 9961 1029 102 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# segment_ids: 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# input_mask 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+# testFullPairTokenizer() testing is passed.
 ```
 
 
